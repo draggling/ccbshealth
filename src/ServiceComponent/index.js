@@ -1,48 +1,58 @@
 import React from "react";
 import { Card, Grid, Button, Icon, Header } from "semantic-ui-react";
 import styled from "styled-components";
+import ROIBackground from '../Images/ROI.png';
+import SSBackground from '../Images/database.jpg';
+import LDRBackground from '../Images/legalfiles.jpg';
+
 
 const ServicesContainer = (props) => {
   return (
     <Container>
       <OurServices as="h2">Our Services</OurServices>
       <Card.Group>
-        <Grid columns="equal" style={{ width: "100%" }}>
+        <Grid columns="equal" style={StyledGrid}>
           <Grid.Column>
-            <StyledCard centered>
+            <h3>Release of Information</h3>
+            <StyledCardROI centered>
               <Card.Content>
-                <Card.Header>Release of Information</Card.Header>
                 <Card.Meta />
-                <Card.Description>
-                  Not only will we keep your facility fully HIPAA compliant, but we will also streamline the entire ROI process to better serve both your patients and requestors.
-                  As well as offering totally free of charge onsite, full services ROI – we also offer remote and revenue share plans.  Ask us how we can save your facility labor and expenses by handling your medical records requests remotely.
-                </Card.Description>
               </Card.Content>
-              <Button as={AnchorTag} href="/#form" onClick={props.showForm} animated="fade">
-                <Button.Content visible> Get a free quote </Button.Content>
+              <Button as={AnchorTag} href="/ReleaseOfInformation" onClick={props.showForm} animated="fade">
+                <Button.Content visible> Go To Page </Button.Content>
                 <Button.Content hidden>
                   <Icon name="mail" />
                 </Button.Content>
               </Button>
-            </StyledCard>
+            </StyledCardROI>
           </Grid.Column>
           <Grid.Column>
-            <StyledCard centered>
+          <h3>Storage Services</h3>
+            <StyledCardSS centered>
               <Card.Content>
-                <Card.Header>Storage Services</Card.Header>
                 <Card.Meta />
-                <Card.Description>
-                  In addition to our release of information services, we also offer paper chart storage services to hospitals and clinics.  Is your hospital or clinic closing?  We can store your paper charts and handle your medical records requests after your facility closes.
-                  We have several storage warehouse locations across the United States, and will keep your facility compliant according to your states records retention policies.
-                </Card.Description>
               </Card.Content>
-              <Button as={AnchorTag} href="#form" onClick={props.showForm} animated="fade">
-                <Button.Content visible> Get a free quote </Button.Content>
+              <Button as={AnchorTag} href="StorageServices" onClick={props.showForm} animated="fade">
+                <Button.Content visible> Go To Page </Button.Content>
                 <Button.Content hidden>
                   <Icon name="mail" />
                 </Button.Content>
               </Button>
-            </StyledCard>
+            </StyledCardSS>
+          </Grid.Column>
+          <Grid.Column>
+          <h3>Legal Document Retrieval</h3>
+            <StyledCardLDR centered>
+              <Card.Content>
+                <Card.Meta />
+              </Card.Content>
+              <Button as={AnchorTag} href="/LegalDocumentRetrieval" onClick={props.showForm} animated="fade">
+                <Button.Content visible> Go To Page </Button.Content>
+                <Button.Content hidden>
+                  <Icon name="mail" />
+                </Button.Content>
+              </Button>
+            </StyledCardLDR>
           </Grid.Column>
         </Grid>
       </Card.Group>
@@ -52,10 +62,38 @@ const ServicesContainer = (props) => {
 
 const AnchorTag = styled.a``;
 
-const StyledCard = styled(Card)`
+const StyledGrid = {
+  width: "100%",
+  "marginLeft": "0vh",
+};
+
+const StyledCardROI = styled(Card)`
   &&& {
-    width: 500px;
+    width: 85%;
     padding: 5%;
+    height: 40vh;
+    background-image: url(${ROIBackground});
+    background-size: cover;
+  }
+`;
+
+const StyledCardSS = styled(Card)`
+  &&& {
+    width: 85%;
+    padding: 5%;
+    height: 40vh;
+    background-image: url(${SSBackground});
+    background-size: cover;
+  }
+`;
+
+const StyledCardLDR = styled(Card)`
+  &&& {
+    width: 85%;
+    padding: 5%;
+    height: 40vh;
+    background-image: url(${LDRBackground});
+    background-size: cover;
   }
 `;
 

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: ghostwhite;
 }
 
 .App-logo {
@@ -48,6 +49,11 @@ margin-bottom: 1%;
    max-width: 50%;
    margin: auto;
    margin-bottom: 5%;
+}
+
+label {
+  flex-direction: row;
+  line-height: 24px;
 }
 
 .thanks {

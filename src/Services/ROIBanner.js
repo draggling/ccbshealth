@@ -9,13 +9,14 @@ const Banner = props => {
       <StyledFigure>
         <StyledImg />
       </StyledFigure>
-      <AboutUsContainer>
-        <h2> Care Consultants Better Solutions, Inc. </h2>
+      <ROIContainer>
+        <h2> Release of Information </h2>
         <p>
-          Care Consultants Better Solutions, Inc. offers release of information services nationwide.
-            We cater our services to meet your direct needs,
-            and always process any and all of your requests at <strong>NO COST</strong> – to include your non-billable medical records requests.
-            We have been in business since 2002, and pride ourselves on the motto of "Patient Care Focused Release of Information Services."
+        Not only will we keep your facility fully HIPAA compliant, but we will also streamline 
+        the entire ROI process to better serve both your patients and requestors. As well as 
+        offering totally free of charge onsite, full services ROI – we also offer remote and 
+        revenue share plans.  Ask us how we can save your facility labor and expenses by 
+        handling your medical records requests remotely.
         </p>
         <Button as={AnchorTag} href="/form" onClick={props.showForm} animated="fade">
           <Button.Content visible> Contact Us </Button.Content>
@@ -23,7 +24,7 @@ const Banner = props => {
             <Icon name="mail" />
           </Button.Content>
         </Button>
-      </AboutUsContainer>
+      </ROIContainer>
 
     </BannerContainer>
   );
@@ -36,7 +37,6 @@ const BannerContainer = styled.div`
   /* display: flex; */
   /* flex-direction: row-reverse; */
   width: 100%;
-  height: 85vh;
   /* margin-bottom: 5%; */
 `;
 
@@ -54,7 +54,7 @@ const StyledFigure = styled.figure`
   margin: 0;
 `;
 
-const AboutUsContainer = styled.div`
+const ROIContainer = styled.div`
     background-color: white;
     position: absolute;
     top: 30%;

@@ -9,13 +9,13 @@ const Banner = props => {
       <StyledFigure>
         <StyledImg />
       </StyledFigure>
-      <AboutUsContainer>
-        <h2> Care Consultants Better Solutions, Inc. </h2>
+      <SSContainer>
+        <h2> Storage Security </h2>
         <p>
-          Care Consultants Better Solutions, Inc. offers release of information services nationwide.
-            We cater our services to meet your direct needs,
-            and always process any and all of your requests at <strong>NO COST</strong> – to include your non-billable medical records requests.
-            We have been in business since 2002, and pride ourselves on the motto of "Patient Care Focused Release of Information Services."
+            In addition to our release of information services, we also offer paper chart storage services to hospitals and clinics. 
+            Is your hospital or clinic closing?  We can store your paper charts and handle your medical records requests after your facility closes.
+            We have several storage warehouse locations across the United States, and will keep your facility compliant according to your state's 
+            record retention policies.   
         </p>
         <Button as={AnchorTag} href="/form" onClick={props.showForm} animated="fade">
           <Button.Content visible> Contact Us </Button.Content>
@@ -23,7 +23,7 @@ const Banner = props => {
             <Icon name="mail" />
           </Button.Content>
         </Button>
-      </AboutUsContainer>
+      </SSContainer>
 
     </BannerContainer>
   );
@@ -36,7 +36,6 @@ const BannerContainer = styled.div`
   /* display: flex; */
   /* flex-direction: row-reverse; */
   width: 100%;
-  height: 85vh;
   /* margin-bottom: 5%; */
 `;
 
@@ -54,7 +53,7 @@ const StyledFigure = styled.figure`
   margin: 0;
 `;
 
-const AboutUsContainer = styled.div`
+const SSContainer = styled.div`
     background-color: white;
     position: absolute;
     top: 30%;

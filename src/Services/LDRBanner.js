@@ -9,13 +9,16 @@ const Banner = props => {
       <StyledFigure>
         <StyledImg />
       </StyledFigure>
-      <AboutUsContainer>
-        <h2> Care Consultants Better Solutions, Inc. </h2>
+      <LDRContainer>
+        <h2> Legal Document Retrieval </h2>
         <p>
-          Care Consultants Better Solutions, Inc. offers release of information services nationwide.
-            We cater our services to meet your direct needs,
-            and always process any and all of your requests at <strong>NO COST</strong> – to include your non-billable medical records requests.
-            We have been in business since 2002, and pride ourselves on the motto of "Patient Care Focused Release of Information Services."
+            Law firms and Insurance companies - let us streamline your medical records process and handle the entire process from start to finish. 
+            With no minimum amount of requests per month required, we offer a low flat fee of 30.00 per set of records retrieved.  
+            We can assist single attorney law firms to large insurance companies needing 1000's of sets of records for quality or HEDIS reviews. 
+            You simply forward the patient signed authorization to us, and we will handle the entire process.
+            We type up the request letters and submit them to the providers directly. We follow up on all requests every 48 hours.
+            We pay for invoices up front and bill your entity monthly for the cost of the medical records/bills plus the $30.00 service fee
+            We provide you with a secure portal where you can access request statuses and finalized PDF files of the requested records     
         </p>
         <Button as={AnchorTag} href="/form" onClick={props.showForm} animated="fade">
           <Button.Content visible> Contact Us </Button.Content>
@@ -23,7 +26,7 @@ const Banner = props => {
             <Icon name="mail" />
           </Button.Content>
         </Button>
-      </AboutUsContainer>
+      </LDRContainer>
 
     </BannerContainer>
   );
@@ -36,7 +39,6 @@ const BannerContainer = styled.div`
   /* display: flex; */
   /* flex-direction: row-reverse; */
   width: 100%;
-  height: 85vh;
   /* margin-bottom: 5%; */
 `;
 
@@ -54,7 +56,7 @@ const StyledFigure = styled.figure`
   margin: 0;
 `;
 
-const AboutUsContainer = styled.div`
+const LDRContainer = styled.div`
     background-color: white;
     position: absolute;
     top: 30%;
