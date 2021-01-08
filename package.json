@@ -9,6 +9,8 @@
     "emailjs-com": "^2.6.4",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-responsive": "^8.2.0",
+    "react-responsive-carousel": "^3.2.11",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.0.1",
     "save": "^2.4.0",

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button, Icon } from "semantic-ui-react";
-import AboutUsBackground from '../Images/temp.jpg';
+import ROIBackground from '../Images/HomeROI.jpg';
 
 const Banner = props => {
   return (
@@ -36,7 +36,7 @@ const AnchorTag = styled.a``;
 const BannerContainer = styled.div`
   /* display: flex; */
   /* flex-direction: row-reverse; */
-  width: 100%;
+  height: 85vh;
   /* margin-bottom: 5%; */
 `;
 
@@ -46,7 +46,7 @@ const StyledImg = styled.img`
   margin: auto;
   max-width: 100%;
   width: 100%;
-  background-image: url(${AboutUsBackground});
+  background-image: url(${ROIBackground});
   background-size: cover;
 `;
 

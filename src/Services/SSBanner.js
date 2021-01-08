@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button, Icon } from "semantic-ui-react";
-import AboutUsBackground from '../Images/temp.jpg';
+import SSBackground from '../Images/HomeSS.jpg';
 
 const Banner = props => {
   return (
@@ -45,7 +45,7 @@ const StyledImg = styled.img`
   margin: auto;
   max-width: 100%;
   width: 100%;
-  background-image: url(${AboutUsBackground});
+  background-image: url(${SSBackground});
   background-size: cover;
 `;
 

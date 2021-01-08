@@ -54,10 +54,11 @@ class QuoteForm extends React.Component {
     }
 
   render () {
-    return(  
+    return( 
     <React.Fragment>
     <NavBar/>
     <div id="form">
+    {(!this.state.submitted) && 
     <StyledForm onSubmit={this.handleSubmit}>
     <StyledFormField>
       <label className = "formLable">Name:</label>
@@ -74,7 +75,7 @@ class QuoteForm extends React.Component {
       <textarea name='comment' value={this.state.comment} placeholder='...' onChange={this.handleChange}/>
     </StyledFormField>
     <Button type='submit'>Submit</Button>
-  </StyledForm>
+  </StyledForm>}
   </div>
   {(this.state.submitted) ? <div className="thanks"> Thanks. Someone will be in touch soon. </div>: null}
   <Footer/>

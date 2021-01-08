@@ -1,35 +1,86 @@
 import React from 'react'
-import { Icon } from 'semantic-ui-react'
+import {Dropdown, Header } from 'semantic-ui-react'
 import styled from "styled-components";
+import {useMediaQuery} from 'react-responsive';
+import { Link } from 'react-router-dom';
+
+const Desktop = ({ children }) => {
+   const isDesktop = useMediaQuery({ minWidth: 1025 })
+   return isDesktop ? children : null
+ }
+ const Mobile = ({ children }) => {
+   const isMobile = useMediaQuery({ maxWidth: 1024 })
+   return isMobile ? children : null
+ }
+
+ const options = [
+    {
+      key: 'home',
+      content: 'Home',
+      as: Link, to: './'
+    },
+   {
+     key: 'RoI',
+     content: 'Release of Information',
+     as: Link, to: './ReleaseOfInformation'
+   },
+   {
+     key: 'SS',
+     content: 'Storage Services',
+     as: Link, to: './StorageServices'
+   },
+   {
+     key: 'LDR',
+     content: 'Legal Document Retrieval',
+     as: Link, to: './LegalDocumentRetrieval'
+   },
+ ]
+ 
 
 const NavBar = (props) => {
 
-
     return (
       <NavContainer>
-      <UlTag>
-      <LiTag><LogoImg alt="logo" src='https://ccbs-logo.s3.us-east-2.amazonaws.com/ccbs-logo/222.jpg' /></LiTag>
-      <LiTag> <Icon name='home'/> <H5pContainer>
+         <Desktop>
+            <UlTag>
+            <LiTag><LogoImg alt="logo" src='https://ccbs-logo.s3.us-east-2.amazonaws.com/ccbs-logo/222.jpg' /></LiTag>
+            <LiTag> <H5pContainer>
                <a href="/">
-                  <h5>Home</h5>
+                  <h5>HOME</h5>
                </a>
             </H5pContainer> </LiTag>
-      <LiTag><Icon name='briefcase' /><H5pContainer><h5>Services</h5>
-         <PTag><a href="/ReleaseOfInformation">Release of Information</a></PTag>
-         <PTag><a href="/StorageServices">Storage Services</a></PTag>
-         <PTag><a href="/LegalDocumentRetrieval">Legal Document Retrieval</a></PTag>
-         </H5pContainer></LiTag>
-      <LiTag><Icon name='clock outline' /><H5pContainer><h5>business hours</h5><PTag>Mon-Fri 9am-5pm</PTag></H5pContainer></LiTag>
-      <LiTag><Icon name='phone' /><H5pContainer><h5>phone</h5>
-         <PTag>(954) 299-5071 Direct</PTag>
-         <PTag>(800) 506-1688 Fax</PTag>
-         </H5pContainer></LiTag>
-      <LiTag><Icon name='home' /><H5pContainer><h5>address</h5>
-         <PTag>300 E Oakland Park Blvd.</PTag>
-         <PTag>Fort Lauderdale, Florida 33334</PTag>
-         </H5pContainer></LiTag>
-      </UlTag>
-    </NavContainer>
+            <LiTag><H5pContainer>
+               <a href="/ReleaseOfInformation">
+                  <h5>RELEASE OF INFORMATION </h5> 
+               </a>
+            </H5pContainer> </LiTag>
+            <LiTag><H5pContainer>
+               <a href="/StorageServices">
+                  <h5>STORAGE SERVICES</h5>
+               </a>
+            </H5pContainer> </LiTag>
+            <LiTag> <H5pContainer>
+               <a href="/LegalDocumentRetrieval">
+                  <h5>LEGAL DOCUMENT RETRIEVAL</h5>
+               </a>
+            </H5pContainer> </LiTag>
+            </UlTag>
+         </Desktop>
+         <Mobile>
+            <UlTag className = 'UlBurger'>
+            <Header as='h4'>
+               <Header.Content>
+               <Dropdown className = "burger"
+                  icon='bars'
+                  options={options}
+                  floating
+                  compact
+               />
+               </Header.Content>
+               </Header>
+            </UlTag>
+         </Mobile>
+      </NavContainer>
 
     /* header */
       
@@ -39,33 +90,26 @@ const NavBar = (props) => {
 
 const H5pContainer = styled.div`
    margin-left: 5%;
-   width: 15em;
-`;
-
-const PTag = styled.p`
-   height: 10%;
-   font-size: 12px;
-   color: #505050;
+   /*width: 15em;*/
+   width: 100%;
 `;
 
 const UlTag = styled.ul`
    background-color: white;
    margin: 0;
-   padding-top: 2%;
+   padding-top: 1.5%;
+   padding-right: 40%;
    padding-bottom: 1%;
-   list-style-type: none;
    display: flex;
-   flex-direction: row;
    justify-content: space-around;
-   align-items: end;
+   align-items: flex-start;
 `;
 
 const LiTag = styled.li`
-display: flex;
+color: white;
+display: -webkit-box;
 flex-direction: row;
-text-align: left;
-border-right: 1px solid #A8A8A8;
-
+align-self: center;
 `;
 
 
