@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  text-align: -webkit-center;
+  background-color: ghostwhite;
 }
 
 .App-logo {
@@ -50,6 +52,57 @@ margin-bottom: 1%;
    margin-bottom: 5%;
 }
 
+label {
+  flex-direction: row;
+  line-height: 24px;
+}
+
 .thanks {
   font-size: 35px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  color: green;
 }
+
+i.icon, i.icons {
+  font-size: 1em;
+}
+
+.burger{
+  font-size: 2.5em;
+}
+
+.UlBurger{
+  padding-top: 5px;
+  display: -webkit-box;
+}
+
+.ui.header{
+  padding-top: 20px;
+}
+
+.ui.grid>.column:not(.row){
+  width: 85%;
+}
+
+element.style {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  padding-bottom: 2%;
+  padding-top: 2%;
+  background-color: gray;
+}
+
+.AboutUsP {
+  font-size:20px;
+}
+
+/*
+.carouselimage {
+  height: 100em;
+}
+*/

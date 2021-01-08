@@ -1,37 +1,26 @@
 import React from "react";
 import "./App.css";
-import Banner from "./BannerComponent";
-import NavBar from "./NavBar";
-import ServicesContainer from "./ServiceComponent";
-import QuoteForm from "./Form"
-import Footer from "./Footer";
+import Home from "./Pages/Home";
+import LDR from "./Pages/LDR";
+import ROI from "./Pages/ROI";
+import SS from "./Pages/SS";
+import Form from "./Form";
+import { Switch, Route } from 'react-router-dom';
+
 
 class App extends React.Component {
-
-state = {
-  showForm: false,
-  submitted: false,
-}
-
-showForm = () => {
-  this.setState({showForm: true, submitted: false})
-}
-
-handleSubmit = () => {
-  this.setState({submitted: !this.state.submitted, showForm: !this.state.showForm})
-}
 
 render () {
   return (
     <div className="App">
-      <NavBar />
-      <Banner showForm={this.showForm}/>
-      <ServicesContainer showForm={this.showForm}/>
-      {this.state.showForm && <QuoteForm handleSubmit={this.handleSubmit}/>}
-      {(this.state.submitted) ? <div className="thanks"> Thanks. Someone will be in touch soon. </div>: null}
-      <Footer/>
+      <Switch>
+        <Route exact path ="/" component={Home} ></Route>
+        <Route exact path ="/ReleaseOfInformation" component={ROI}></Route>
+        <Route exact path ="/StorageServices" component={SS}></Route>
+        <Route exact path ="/LegalDocumentRetrieval" component={LDR}></Route>
+        <Route exact path ="/form" component={Form}></Route>
+      </Switch>
     </div>
-
   );
 }
 
