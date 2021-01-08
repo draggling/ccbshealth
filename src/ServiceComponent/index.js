@@ -1,9 +1,9 @@
 import React from "react";
 import { Card, Grid, Button, Icon, Header } from "semantic-ui-react";
 import styled from "styled-components";
-import ROIBackground from '../Images/ROIThumbnail.jpg';
-import SSBackground from '../Images/SSThumbnail.jpg';
-import LDRBackground from '../Images/LDRThumbnail.jpg';
+import ROIBackground from '../Images/ROIThumbnail2.jpg';
+import SSBackground from '../Images/SSThumbnail2.jpg';
+import LDRBackground from '../Images/LDRThumbnail2.jpg';
 import {useMediaQuery} from 'react-responsive';
 
 
@@ -121,7 +121,7 @@ const ServicesContainer = (props) => {
   return (
     <React.Fragment>
     <Container>
-      <OurServices as="h2">Our Services</OurServices>
+      <OurServices as="h1">Our Services</OurServices>
       <Card.Group>
         <Desktop>
           <Grid columns="equal" style={StyledDesktopGrid}>
@@ -156,7 +156,7 @@ const StyledCardROI = styled(Card)`
   &&& {
     width: 85%;
     padding: 5%;
-    height: 42vh;
+    height: 45vh;
     background-image: url(${ROIBackground});
     background-size: cover;
   }
@@ -166,7 +166,7 @@ const StyledCardSS = styled(Card)`
   &&& {
     width: 85%;
     padding: 5%;
-    height: 42vh;
+    height: 45vh;
     background-image: url(${SSBackground});
     background-size: cover;
   }
@@ -176,7 +176,7 @@ const StyledCardLDR = styled(Card)`
   &&& {
     width: 85%;
     padding: 5%;
-    height: 42vh;
+    height: 45vh;
     background-image: url(${LDRBackground});
     background-size: cover;
   }
@@ -184,6 +184,7 @@ const StyledCardLDR = styled(Card)`
 
 const Container = styled.div`
   margin-bottom: 5%;
+  padding-top: 2%;
 `;
 
 const OurServices = styled(Header)`

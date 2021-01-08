@@ -97,6 +97,10 @@ element.style {
   background-color: gray;
 }
 
+.AboutUsP {
+  font-size:20px;
+}
+
 /*
 .carouselimage {
   height: 100em;

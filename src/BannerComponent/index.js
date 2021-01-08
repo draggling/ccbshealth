@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button, Icon } from "semantic-ui-react";
-import AboutUsBackground from '../Images/CarouselHome.jpg';
+import AboutUsBackground from '../Images/CarouselHome2.jpg';
 import ROIBackground from '../Images/CarouselROI.jpg';
 import SSBackground from '../Images/CarouselSS.jpg';
 import LDRBackground from '../Images/CarouselLDR.jpg';
@@ -63,15 +63,15 @@ const Banner = props => {
 
 const AboutUs = props => {
   return (
-  <AboutUsContainer>
+  <React.Fragment>
   <h2> Care Consultants Better Solutions, Inc. </h2>
-  <p>
+  <p className = "AboutUsP">
     Care Consultants Better Solutions, Inc. offers release of information services nationwide.
       We cater our services to meet your direct needs,
       and always process any and all of your requests at <strong>NO COST</strong> – to include your non-billable medical records requests.
       We have been in business since 2002, and pride ourselves on the motto of "Patient Care Focused Release of Information Services."
   </p>
-  </AboutUsContainer>
+  </React.Fragment> 
   );
 }
 
@@ -79,7 +79,6 @@ const Banner = props => {
   return (
       <React.Fragment>
         <CarouselBody/>
-        <AboutUs/>
       </React.Fragment>
   );
 };
@@ -99,13 +98,14 @@ const StyledFigure = styled.figure`
 `;
 
 const AboutUsContainer = styled.div`
-    top: 30%;
-    left: 20%;
-    width: 80%
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    position:absolute;
     justify-content: center;
+    top: 40%;
     padding: 5% 6%;
     border-radius: 3%;
-    background: ghostwhite;
   /* -webkit-transform: translate(-50%,-50%);
 -ms-transform: translate(-50%,-50%);
 transform: translate(-50%,-50%); */
